@@ -1,0 +1,119 @@
+
+I/flutter (15402):  deneme range
+I/flutter (15402): 2022-08-04 00:00:00.000 - 2022-08-18 00:00:00.000
+I/flutter (15402): Daterange  Selected:2022-08-04 00:00:00.000 - 2022-08-18 00:00:00.000
+I/flutter (15402): Daterange start Selected:2022-08-04 00:00:00.000
+I/flutter (15402): Daterange end Selected:2022-08-18 00:00:00.000
+I/flutter (15402): deneme result : null
+
+I/flutter (15402): Daterange end Selected:2022-08-18 00:00:00.000
+I/flutter (15402): deneme result : null
+I/flutter (15402): Gelir
+I/flutter (15402): 18  dh 2022-08-10 00:00:00.000
+
+
+
+
+
+bittiiii :)
+2048
+
+kayıt ıcon
+!!!!!!!!!!!!!!!!
+kategori silinecegi zaman arşivdekilerinde silineceginden bahset
+
+//////yeni guncellemeden dolayı data base guncellemesı yapılmalı   database_helper dosyasında
+
+
+CREATE TABLE "archive" (
+	"id"	INTEGER NOT NULL,
+	"categoryID"	INTEGER NOT NULL DEFAULT 1,
+	"noteTitle"	TEXT NOT NULL,
+	"context"	TEXT,
+	"time"	TEXT NOT NULL DEFAULT 'CURRENT_TIMESTAMP',
+	"priority"	INTEGER NOT NULL DEFAULT 1,
+	PRIMARY KEY("id" AUTOINCREMENT),
+	FOREIGN KEY("categoryID") REFERENCES "category"("categoryID") ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+
+
+/data/data/com.example.notes/databases/notes.db
+C:\Users\LENOVO\AppData\Local\Google\AndroidStudio2021.2\device-explorer\Pixel_API_30 [emulator-5554]\data\data\com.example.notes\databases
+
+
+FlutterError (setState() called after dispose(): _CategoryPageState#71b3b(lifecycle state: defunct, not mounted)
+This error happens if you call setState() on a State object for a widget that no longer appears in the widget tree (e.g., whose parent widget no longer includes the widget in its build). This error can occur when code calls setState() from a timer or an animation callback.
+The preferred solution is to cancel the timer or stop listening to the animation in the dispose() callback. Another solution is to check the "mounted" property of this object before calling setState() to ensure the object is still in the tree.
+This error might indicate a memory leak if setState() is being called because another object is retaining a reference to this State object after it has been removed from the tree. To avoid memory leaks, consider breaking the reference to this object during dispose().)
+
+
+
+ settings page ten 
+
+ 
+/*   
+
+ return Column(
+      children: [
+        TextFormField(
+          decoration: InputDecoration(
+              prefixIcon: Icon(
+                Icons.lock,
+                color: Colors.black,
+              ),
+              hintText: "Parola",
+              border: OutlineInputBorder()),
+        ),
+        SizedBox(height: 20),
+        Row(
+          children: [
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Kaydet 💾"),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("İptal ❌"),
+            ),
+          ],
+        )
+      ],
+    );
+
+
+
+ DropdownButtonHideUnderline(
+          child: DropdownButton<String>(
+            iconEnabledColor: Colors.grey.shade400,
+            items: [""]
+                .map(
+                  (String e) => DropdownMenuItem<String>(
+                    value: e,
+                    child: Container(
+                      color: Colors.amber,
+                      height: 200,
+                      width: ekranGenisligi - 125,
+                      child: Column(
+                        //bu column 48 almıs ama 169
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Parola Değiştir",
+                            style: headerStyle3,
+                          ),
+                          SizedBox(height: 20),
+                          Form(child: buildForm()),
+                          
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+                .toList(),
+            onChanged: (String e) {},
+          ),
+        )
+
+
+ */
