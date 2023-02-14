@@ -176,8 +176,8 @@ class _MyDateRangePickerState extends State<MyDateRangePicker> {
                   ],
                 ),
               ),
-              FlatButton(
-                  onPressed: () {
+              InkWell(
+                  onTap: () {
                     int sd = int.parse(baslangicDay.round().toString());
                     int sm = int.parse(baslangicMounth.round().toString());
                     int ed = int.parse(bitisDay.round().toString());

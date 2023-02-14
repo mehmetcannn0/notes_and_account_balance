@@ -23,7 +23,7 @@ class _LoginState extends State<Login> {
     String password = settings.password;
     return SafeArea(
       child: Scaffold(
-        // resizeToAvoidBottomInset: false,
+        // resizeToAvoidBottomInset: false,  //klavye acıldıgında goruntunun klavyenın altında kalmasını saglar
         backgroundColor: Color.fromARGB(255, 215, 215, 215),
         body: Padding(
           padding: const EdgeInsets.only(top: 18.0),

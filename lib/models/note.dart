@@ -1,6 +1,6 @@
 // class Note implements Comparable<Note> {
 class Note implements Comparable<Note> {
-  int id;
+  int id; //db deki
   int noteID;
   int categoryID;
   String categoryTitle;
@@ -10,12 +10,34 @@ class Note implements Comparable<Note> {
   String time;
   int priority;
   int archive;
-  Note(this.categoryID, this.title, this.content, this.time, this.priority,
-      this.archive);
-  Note.withID(this.id, this.categoryID, this.title, this.content, this.time,
-      this.priority, this.archive);
-  Note.all(this.id, this.categoryID, this.categoryTitle, this.categoryColor,
-      this.title, this.content, this.priority, this.time, this.archive);
+  Note(
+    this.categoryID,
+    this.title,
+    this.content,
+    this.time,
+    this.priority,
+    this.archive,
+  );
+  Note.withID(
+    this.id,
+    this.categoryID,
+    this.title,
+    this.content,
+    this.time,
+    this.priority,
+    this.archive,
+  );
+  Note.all(
+    this.id,
+    this.categoryID,
+    this.categoryTitle,
+    this.categoryColor,
+    this.title,
+    this.content,
+    this.priority,
+    this.time,
+    this.archive,
+  );
 
   Note.fromMap(Map map) {
     this.id = map["id"];

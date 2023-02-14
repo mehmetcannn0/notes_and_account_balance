@@ -124,23 +124,24 @@ class _SettingsPageState extends State<SettingsPage> {
                 primary: Colors.grey.shade400, elevation: 3),
             onPressed: () {
               showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      title: Text("Bir Renk Seçin"),
-                      content: SingleChildScrollView(
-                        child: MaterialPicker(
-                            pickerColor: settings.currentColor,
-                            onColorChanged: (Color color) {
-                              setState(() {
-                                currentColor = color;
-                                settings.currentColor = color;
-                              });
-                              Navigator.pop(context);
-                            }),
-                      ),
-                    );
-                  });
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: Text("Bir Renk Seçin"),
+                    content: SingleChildScrollView(
+                      child: MaterialPicker(
+                          pickerColor: settings.currentColor,
+                          onColorChanged: (Color color) {
+                            setState(() {
+                              currentColor = color;
+                              settings.currentColor = color;
+                            });
+                            Navigator.pop(context);
+                          }),
+                    ),
+                  );
+                },
+              );
             },
             child: Text(
               "Renk Seç",

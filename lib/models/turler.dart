@@ -19,7 +19,7 @@ class Turler {
 
   Map<String, dynamic> toMap() {
     print("to map içi");
-    Map<String, dynamic> map = {};
+    Map<String, dynamic> map = {}; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     map["tur"] = tur;
     map["turTitle"] = turTitle;
     map["turColor"] = color.toString();

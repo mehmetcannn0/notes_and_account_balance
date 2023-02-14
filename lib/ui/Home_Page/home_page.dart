@@ -362,7 +362,7 @@ class _HomePageState extends State<HomePage> {
       builder: (context) {
         return SimpleDialog(
           title: Text(
-            "Kategori Düzenle",
+            "Kategori Düzenle", 
             style: TextStyle(color: Theme.of(context).primaryColor),
           ),
           children: [
@@ -530,6 +530,8 @@ class _HomePageState extends State<HomePage> {
 }
 
 class Notes extends StatefulWidget {
+  //!!! kesme noktası koyulmus ????
+  //??
   const Notes({Key key}) : super(key: key);
 
   @override
