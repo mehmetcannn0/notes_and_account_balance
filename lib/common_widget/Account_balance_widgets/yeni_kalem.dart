@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes/common_widget/flat_button_yeni.dart';
 // import 'package:intl/intl.dart';
 
 import '../../const.dart';
@@ -72,8 +73,8 @@ class _YeniKalemState extends State<YeniKalem> {
                 Row(
                   children: [
                     Form(
-                      child: FlatButton(
-                        color: tur == null
+                      child: FlatButtonYeni(
+                        backGroundColor: tur == null
                             ? Colors.green
                             : tur == 1
                                 ? Colors.green
@@ -89,8 +90,8 @@ class _YeniKalemState extends State<YeniKalem> {
                       ),
                     ),
                     Form(
-                      child: FlatButton(
-                        color: tur == null
+                      child: FlatButtonYeni(
+                        backGroundColor: tur == null
                             ? Colors.red
                             : tur == 2
                                 ? Colors.red
@@ -141,8 +142,8 @@ class _YeniKalemState extends State<YeniKalem> {
                 // ),
               ],
             ),
-            FlatButton(
-              color: Theme.of(context).primaryColorLight,
+            FlatButtonYeni(
+              backGroundColor: Theme.of(context).primaryColorLight,
               textColor: Colors.deepPurpleAccent,
               onPressed: () {
                 print("tur : " + tur.toString());

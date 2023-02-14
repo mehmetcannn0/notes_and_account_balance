@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:notes/common_widget/Platform_Duyarli_Alert_Dialog/platform_duyarli_alert_dialog.dart';
+import 'package:notes/common_widget/flat_button_yeni.dart';
 import 'package:notes/const.dart';
 // import 'package:intl/intl.dart';
 import 'package:notes/models/kalem.dart';
@@ -50,8 +51,8 @@ class _KalemListesiState extends State<KalemListesi> {
                       width: 0,
                     ),
               Form(
-                child: FlatButton(
-                  color: Colors.grey,
+                child: FlatButtonYeni(
+                  backGroundColor: Colors.grey,
                   textColor: settings.currentColor,
                   onPressed: () async {
                     picked = await showDateRangePicker(
