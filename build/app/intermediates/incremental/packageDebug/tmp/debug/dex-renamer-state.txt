@@ -1,4 +1,4 @@
-#Tue Nov 15 17:15:59 TRT 2022
+#Tue Feb 14 15:35:41 TRT 2023
 base.0=D\:\\StudioProjects\\notes_and_account_balance\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

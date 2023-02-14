@@ -42,6 +42,13 @@ class DatabaseHelper {
       List<int> bytes =
           data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
       await File(path).writeAsBytes(bytes, flush: true);
+      addNote(Note(
+          1,
+          "Kullanıcıya mesaj",
+          "Uygulama hakkında ki öneri ve şikayetlerinizi bana bildirmeniz beni mutlu eder mehmetceraslan@gmail.com",
+          DateTime.now().toString(),
+          1,
+          0));
     } else {
       // await createArchiveTable();
       print("olan db acılıyor");
