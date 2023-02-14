@@ -2,6 +2,8 @@
 /shelf/
 /workspace.xml
 
-#
-.dart_tool/*
-build/*
+# buraya yazılanlar nedense işe yaramadı
+.dart_tool/
+build/
+/lib/yeni.txt
+*.txt
