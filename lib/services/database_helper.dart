@@ -232,6 +232,8 @@ class DatabaseHelper {
 
   Future updateNote(Note note) async {
     Database db = await _getDatabase();
+    print(note.toMap());
+
     return await db
         .update("note", note.toMap(), where: "id=?", whereArgs: [note.id]);
   }
