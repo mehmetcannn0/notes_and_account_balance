@@ -69,7 +69,7 @@
     },
     {
       "name": "intl",
-      "rootUri": "file:///D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
+      "rootUri": "file:///D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.18.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -105,7 +105,7 @@
     },
     {
       "name": "provider",
-      "rootUri": "file:///D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/provider-6.0.3",
+      "rootUri": "file:///D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/provider-6.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -129,9 +129,9 @@
     },
     {
       "name": "sqflite_common",
-      "rootUri": "file:///D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite_common-2.3.0",
+      "rootUri": "file:///D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite_common-2.4.2+2",
       "packageUri": "lib/",
-      "languageVersion": "2.16"
+      "languageVersion": "2.18"
     },
     {
       "name": "stack_trace",
@@ -153,9 +153,9 @@
     },
     {
       "name": "synchronized",
-      "rootUri": "file:///D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/synchronized-3.0.0+3",
+      "rootUri": "file:///D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/synchronized-3.0.1",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.18"
     },
     {
       "name": "term_glyph",
@@ -182,7 +182,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2023-01-17T11:19:36.305933Z",
+  "generated": "2023-02-20T14:14:04.244335Z",
   "generator": "pub",
   "generatorVersion": "2.18.6"
 }
