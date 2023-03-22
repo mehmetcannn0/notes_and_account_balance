@@ -68,57 +68,55 @@ class _NoteDetailState extends State<NoteDetail> {
         return true;
       },
       child: SafeArea(
-        child: SafeArea(
-          child: Scaffold(
-            floatingActionButton: Visibility(
-              /*buradakı amac klavye acıldıgı zaman butonun
+        child: Scaffold(
+          floatingActionButton: Visibility(
+            /*buradakı amac klavye acıldıgı zaman butonun
              klavyenın ustune cıkmasını engellemek yanı 
              yapmak ıstedıgımız sey butonu gorunmez yapmak */
-              visible: MediaQuery.of(context).viewInsets.bottom == 0,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: FloatingActionButton(
-                  backgroundColor: Colors.white,
-                  elevation: 5,
-                  child: Icon(
-                    Icons.save,
-                    color: Colors.grey.shade700,
-                  ),
-                  onPressed: () {
-                    save(context);
-                  },
+            // visible: MediaQuery.of(context).viewInsets.bottom == 0,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: FloatingActionButton(
+                backgroundColor: Colors.white,
+                elevation: 5,
+                child: Icon(
+                  Icons.save,
+                  color: Colors.grey.shade700,
                 ),
+                onPressed: () {
+                  save(context);
+                },
               ),
             ),
-            backgroundColor: backgroundColor,
-            body: FutureBuilder(
-              future: readCategories(),
-              builder: (BuildContext context, _) {
-                if (!readed) {
-                  return MerkezWidget(children: [CircularProgressIndicator()]);
-                } else {
-                  if (allCategories.isEmpty) {
-                    return Center(
-                      child: Text(
-                        "Lütfen önce bir kategori oluşturun!",
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    );
-                  }
+          ),
+          backgroundColor: backgroundColor,
+          body: FutureBuilder(
+            future: readCategories(),
+            builder: (BuildContext context, _) {
+              if (!readed) {
+                return MerkezWidget(children: [CircularProgressIndicator()]);
+              } else {
+                if (allCategories.isEmpty) {
+                  return Center(
+                    child: Text(
+                      "Lütfen önce bir kategori oluşturun!",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  );
                 }
-                return SingleChildScrollView(
-                  child: Container(
-                    child: Form(
-                        key: formKey,
-                        child: Column(children: [
-                          buildAppBar(widget.gelenCategoryID),
-                          buildTitleFormField(),
-                          buildFormField(),
-                        ])),
-                  ),
-                );
-              },
-            ),
+              }
+              return SingleChildScrollView(
+                child: Container(
+                  child: Form(
+                      key: formKey,
+                      child: Column(children: [
+                        buildAppBar(widget.gelenCategoryID),
+                        buildTitleFormField(),
+                        buildFormField(),
+                      ])),
+                ),
+              );
+            },
           ),
         ),
       ),
@@ -300,6 +298,14 @@ class _NoteDetailState extends State<NoteDetail> {
     int result;
     String returnStr;
     if (updateNote == null) {
+      print(
+          " categoryID,          noteTitle,          noteContent,          suan.toString(),          selectedPriority,          archive");
+      print(categoryID);
+      print(noteTitle);
+      print(noteContent);
+      print(suan);
+      print(selectedPriority);
+      print(archive);
       result = await databaseHelper.addNote(
         Note(
           categoryID,
@@ -321,7 +327,7 @@ class _NoteDetailState extends State<NoteDetail> {
         noteContent,
         suan.toString(),
         selectedPriority,
-        archive,
+        updateNote.archive,
       ));
       if (result != 0) {
         returnStr = "updated";
