@@ -34,8 +34,8 @@ class Note implements Comparable<Note> {
     this.categoryColor,
     this.title,
     this.content,
-    this.priority,
     this.time,
+    this.priority,
     this.archive,
   );
 
