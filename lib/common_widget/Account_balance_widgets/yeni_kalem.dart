@@ -24,7 +24,9 @@ class _YeniKalemState extends State<YeniKalem> {
     if (miktarKontrolcusu.text == null || miktarKontrolcusu.text == "") {
       miktarKontrolcusu.text = "0";
     }
-    final girilenMiktar = int.parse(miktarKontrolcusu.text);
+    // final girilenMiktar = int.parse(miktarKontrolcusu.text);
+    final girilenMiktar =
+        double.parse(miktarKontrolcusu.text.replaceAll(",", ".")).toInt();
     if (girilenBaslik.isEmpty || girilenMiktar <= 0) {
       return;
     } else {
