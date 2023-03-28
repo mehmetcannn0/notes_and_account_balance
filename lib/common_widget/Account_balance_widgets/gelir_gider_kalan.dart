@@ -31,7 +31,7 @@ class _GelirGiderKalanState extends State<GelirGiderKalan> {
                   color: Colors.green,
                   child: Text(
                     "gelir: " + widget.gelir.toString(),
-                    style: headerStyle22,
+                    style: headerStyle23,
                   ),
                 )
               : Card(
@@ -39,7 +39,7 @@ class _GelirGiderKalanState extends State<GelirGiderKalan> {
                   color: Colors.grey,
                   child: Text(
                     "gelir: " + widget.gelir.toString(),
-                    style: headerStyle22,
+                    style: headerStyle23,
                   ),
                 ),
           widget.gelir == 0
@@ -48,7 +48,7 @@ class _GelirGiderKalanState extends State<GelirGiderKalan> {
                   color: Colors.red,
                   child: Text(
                     "gider: " + widget.gider.toString(),
-                    style: headerStyle22,
+                    style: headerStyle23,
                   ),
                 )
               : Card(
@@ -56,7 +56,7 @@ class _GelirGiderKalanState extends State<GelirGiderKalan> {
                   color: Colors.red,
                   child: Text(
                     "gider: " + widget.gider.toString(),
-                    style: headerStyle22,
+                    style: headerStyle23,
                   ),
                 ),
           Card(
@@ -64,7 +64,7 @@ class _GelirGiderKalanState extends State<GelirGiderKalan> {
             color: Colors.blueAccent,
             child: Text(
               "kalan: " + widget.kalan.toString(),
-              style: headerStyle22,
+              style: headerStyle23,
             ),
           ),
         ],
