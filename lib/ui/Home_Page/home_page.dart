@@ -148,22 +148,41 @@ class _HomePageState extends State<HomePage> {
             "Ana Sayfa",
             style: headerStyle,
           ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(primary: settings.currentColor),
-            child: Text(
-              "Ara",
-              style: headerStyle3,
-            ),
-            onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => SearchPage()));
-            },
-          ),
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => SearchPage()));
+              },
+              icon: Card(
+                  margin: EdgeInsets.all(1),
+                  elevation: 6,
+                  color: settings.currentColor,
+                  child: Icon(
+                    Icons.search,
+                    size: 30,
+                  )))
+          // ElevatedButton(
+          //   style: ElevatedButton.styleFrom(primary: settings.currentColor),
+          //   child: Icon(Icons.search),
+          //   // Text(
+          //   //   "Ara",
+          //   //   style: headerStyle3,
+          //   // ),
+          //   onPressed: () {
+          //     Navigator.of(context)
+          //         .push(MaterialPageRoute(builder: (context) => SearchPage()));
+          //   },
+          // ),
+          ,
           GestureDetector(
-            child: Icon(
-              Icons.account_balance_wallet_outlined,
-              color: Colors.grey.shade800,
-              size: 30,
+            child: Card(
+              color: settings.currentColor,
+              elevation: 6,
+              child: Icon(
+                Icons.account_balance_wallet_outlined,
+                color: Colors.grey.shade800,
+                size: 30,
+              ),
             ),
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
@@ -171,10 +190,14 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           GestureDetector(
-            child: Icon(
-              Icons.settings,
-              color: Colors.grey.shade800,
-              size: 30,
+            child: Card(
+              color: settings.currentColor,
+              elevation: 6,
+              child: Icon(
+                Icons.settings,
+                color: Colors.grey.shade800,
+                size: 30,
+              ),
             ),
             onTap: () async {
               String result = await Navigator.of(context).push(
@@ -202,15 +225,27 @@ class _HomePageState extends State<HomePage> {
                 "Kategoriler",
                 style: headerStyle2,
               ),
-              GestureDetector(
-                child: Text(
-                  "+Yeni",
-                  style: headerStyle3,
-                ),
-                onTap: () {
-                  addCategoryDialog(context);
-                },
-              )
+              IconButton(
+                  onPressed: () {
+                    addCategoryDialog(context);
+                  },
+                  icon: Card(
+                      margin: EdgeInsets.all(1),
+                      elevation: 6,
+                      color: settings.currentColor,
+                      child: Icon(
+                        Icons.add,
+                        size: 30,
+                      )))
+              //  , GestureDetector(
+              //     child: Text(
+              //       "+Yeni",
+              //       style: headerStyle3,
+              //     ),
+              //     onTap: () {
+              //       addCategoryDialog(context);
+              //     },
+              // )
             ],
           ),
         ));
@@ -362,7 +397,7 @@ class _HomePageState extends State<HomePage> {
       builder: (context) {
         return SimpleDialog(
           title: Text(
-            "Kategori Düzenle", 
+            "Kategori Düzenle",
             style: TextStyle(color: Theme.of(context).primaryColor),
           ),
           children: [
@@ -648,33 +683,47 @@ class _NotesState extends State<Notes> {
             Row(
               children: [
                 OpenContainer(
-                  onClosed: (result) {
-                    if (result != null) {
-                      setState(() {
-                        //widgetların yenılenmesı ıcın
-                        //son notlar kısmındakı
-                      });
-                    }
-                  },
-                  transitionType: ContainerTransitionType.fade,
-                  openBuilder: (BuildContext context, VoidCallback _) =>
-                      NoteDetail(
-                    gelenArchive: 0,
-                  ),
-                  closedElevation: 6,
-                  closedColor: settings.currentColor,
-                  closedBuilder:
-                      (BuildContext context, VoidCallback openContainer) =>
-                          Text(
-                    "+Yeni",
-                    style: headerStyle2,
-                  ),
-                ),
+                    onClosed: (result) {
+                      if (result != null) {
+                        setState(() {
+                          //widgetların yenılenmesı ıcın
+                          //son notlar kısmındakı
+                        });
+                      }
+                    },
+                    transitionType: ContainerTransitionType.fade,
+                    openBuilder: (BuildContext context, VoidCallback _) =>
+                        NoteDetail(
+                          gelenArchive: 0,
+                        ),
+                    closedElevation: 6,
+                    closedColor: settings.currentColor,
+                    closedBuilder:
+                        (BuildContext context, VoidCallback openContainer) =>
+                            Card(
+                                color: settings.currentColor,
+                                margin: EdgeInsets.all(1),
+                                child: Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ))
+                    //         Text(
+                    //   "+Yeni",
+                    //   style: headerStyle2,
+                    // ),
+                    ),
                 SizedBox(
                   width: 10,
                 ),
                 GestureDetector(
-                  child: Icon(Icons.sort),
+                  child: Card(
+                      margin: EdgeInsets.all(1),
+                      color: settings.currentColor,
+                      elevation: 6,
+                      child: Icon(
+                        Icons.sort,
+                        size: 30,
+                      )),
                   onTap: () {
                     sortNotesDialog(context);
                   },
