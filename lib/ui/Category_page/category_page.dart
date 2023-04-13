@@ -45,6 +45,31 @@ class _CategoryPageState extends State<CategoryPage> {
           appBar: AppBar(
             backgroundColor: settings.currentColor,
             actions: [
+              OpenContainer(
+                onClosed: (result) {
+                  if (result != null) {
+                    setState(() {
+                      //widgetların yenılenmesı ıcın
+                      //son notlar kısmındakı
+                    });
+                  }
+                },
+                transitionType: ContainerTransitionType.fade,
+                openBuilder: (BuildContext context, VoidCallback _) =>
+                    NoteDetail(
+                  gelenColor: Color(category.color),
+                  gelenCategoryID: category.id,
+                  gelenArchive: 0,
+                ),
+                closedElevation: 9,
+                closedColor: settings.currentColor,
+                closedBuilder:
+                    (BuildContext context, VoidCallback openContainer) => Icon(
+                  Icons.add_circle_outlined,
+                  color: Colors.white,
+                  size: 35,
+                ),
+              ),
               IconButton(
                   onPressed: () {
                     if (category.id != 0) {
